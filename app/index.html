@@ -1,0 +1,70 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="./lib/angular.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link href="./css/styles.css" rel="stylesheet">
+
+
+
+    </head>
+    <body class="body" ng-app="rps">
+    	<div ng-controller="RpsPlayController as vm">
+    	<section id="players" >
+    		<ul class="ul">
+    			<li class="li inline width-50"><h2 class="font-white opacity-50" ng-bind="vm.players.p1.name"></h2></li>
+    			<li class="li inline width-50"><h2 class="font-white opacity-50" ng-bind="vm.players.p2.name"></h2></l1>
+    		</ul>
+    	</section>
+    	<section id="score" >
+    		<ul class="ul">
+    			<li class="li inline width-50"><h1 class="circle background-red font-white" ng-bind="vm.players.p1.score"></h1></li>
+    			<li class="li inline width-50" font-white""><h1 class="circle background-red font-white" ng-bind="vm.players.p2.score"></h1></li>
+    		</ul>
+    	</section>
+    	<section id="countdown" ng-show="vm.playing" >
+    		
+
+    		</ul>	
+    	</section>
+    	<section id="results" ng-show="vm.showScore" >
+    		<ul class="ul">
+    			<li class="li inline width-50"><div ng-class="'selection-' + vm.playerSelection.toString()" class="image-rps block-center"></div></li>
+    			<li class="li inline width-50"><div ng-class="'selection-' + vm.aiSelection.toString()" class="image-rps block-center"></div></li>
+    		</ul>	
+    	</section> 
+        <h1 class="result element-center font-white" ng-hide="vm.playing" ng-bind="vm.result"></h1>
+    	<section id="selection" ng-show="vm.playing" >
+    		
+				<ul class="ul ul-center width-75 block-center">
+					<li class="li inline width-33">
+						<label class="selection-0 image-rps radio radio-hidden">
+							<input type="radio" ng-click="vm.endGame()" ng-model="vm.userChoice" value="0">
+						</label>
+					</li>
+					<li class="li inline width-33">
+						 <label class="selection-1 image-rps radio radio-hidden">
+							<input type="radio" ng-click="vm.endGame()" ng-model="vm.userChoice" value="1">
+						</label class="radio hidden">
+					</li>
+					<li class="li inline width-33">
+						 <label class="selection-2 image-rps radio radio-hidden">
+							<input type="radio" ng-click="vm.endGame()" ng-model="vm.userChoice" value="2">
+						</label>
+					</li>
+				</ul>	
+    	</section>
+    	
+        <button class="button button-massive element-center background-yellow" ng-click="vm.startGame()" ng-hide="vm.playing" ng-bind="vm.playBtn"></button>
+    </div>
+
+    <script src="./js/rps.module.js"></script>
+    <script src="./js/rps.controller.js"></script>
+
+    </body>
+</html>

@@ -1,0 +1,136 @@
+
+.body { 
+	font-family: 'Roboto', sans-serif;
+	font-size:1em;
+	background-color: #3F51B5; // Old browsers
+
+}
+.ul {
+	list-style-type: none;
+	padding: 10px 0 10px 0;
+	overflow:hidden;
+}
+
+.li {
+	display: block;
+	text-align: center;
+	position:relative;
+}
+
+
+.block-center {
+	display:block;
+	margin:auto;
+}
+
+.font-white {
+	color:white;
+}
+.background-yellow {
+	background-color:#FBC02D;
+}
+.background-red {
+	background-color:#C2185B;
+}
+
+.opacity-50 {
+	opacity:0.5;
+
+}
+
+.circle {
+	border-radius:100%;
+}
+
+.inline {
+	float:left;
+}
+.width-50 {
+	width:50%;
+}
+
+.width-33 {
+	width:33%;
+}
+
+.width-45 {
+	width:45%;
+}
+.width-10 {
+	width:10%;
+}
+.width-75 {
+	width:75%
+}
+
+.button-massive {
+
+	font-size:2rem;
+	padding:10px 20px;
+
+}
+.button {
+	border:0px;
+	border-radius:10px;
+	cursor:pointer;
+	transition: box-shadow 0.2s;
+}
+
+
+
+.button:hover {
+	box-shadow: 0px 0px 10px;
+
+	
+
+}
+.element-center {
+	display:block;
+	margin:auto;
+	text-align:center;
+}
+
+.result {
+	margin:-100px 0 100px 0
+}
+
+.radio-hidden input {
+	visibility:hidden;
+	position:absolute;
+}
+
+.image-rps {
+	background-image:url(/app/images/rps-background.png);
+	background-size:550px 230px;
+	width:200px;
+	height:200px;
+	display:block;
+	cursor: pointer;
+	margin:auto;
+	border-radius:100px;
+	transition: box-shadow 1s;
+
+}
+.image-rps:hover {
+	box-shadow: 0px 0px 10px;
+}
+
+.selection-0 {
+	background-position: 0px 0px;
+}
+
+.selection-1 {
+	background-position:-180px -40px;
+}
+
+.selection-2 {
+	background-position:-350px 20px;
+}
+
+#score h1 {
+	width:50px;
+	height:50px;
+	margin:auto;
+	line-height:50px;
+}
+
